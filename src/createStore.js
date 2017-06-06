@@ -148,6 +148,10 @@ export default function createStore(reducer, preloadedState, enhancer) {
    */
   function dispatch(action) {
     if (!isPlainObject(action)) {
+      console.log(arguments, 'args');
+      console.log(typeof action, 'action type');
+      console.log(action, 'action');
+      console.log(JSON.stringify(action), 'json');
       throw new Error(
         'Actions must be plain objects. ' +
         'Use custom middleware for async actions.'
